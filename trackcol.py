@@ -95,3 +95,6 @@ def getContours(img,imgContour):
             elif (cy > int(frameHeight / 2) + deadZone):
                 cv2.putText(imgContour, " GO DOWN ", (20, 50), cv2.FONT_HERSHEY_COMPLEX, 1,(0, 0, 255), 3)
                 cv2.rectangle(imgContour,(int(frameWidth/2-deadZone),int(frameHeight/2)+deadZone),(int(frameWidth/2+deadZone),frameHeight),(0,0,255),cv2.FILLED)
+                
+            cv2.line(imgContour, (int(frameWidth/2),int(frameHeight/2)), (cx,cy),
+                     (0, 0, 255), 3)
