@@ -98,3 +98,7 @@ def getContours(img,imgContour):
                 
             cv2.line(imgContour, (int(frameWidth/2),int(frameHeight/2)), (cx,cy),
                      (0, 0, 255), 3)
+            
+def display(img):
+    cv2.line(img,(int(frameWidth/2)-deadZone,0),(int(frameWidth/2)-deadZone,frameHeight),(255,255,0),3)
+    cv2.line(img,(int(frameWidth/2)+deadZone,0),(int(frameWidth/2)+deadZone,frameHeight),(255,255,0),3)
