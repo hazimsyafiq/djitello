@@ -106,3 +106,17 @@ def display(img):
     cv2.circle(img,(int(frameWidth/2),int(frameHeight/2)),5,(0,0,255),5)
     cv2.line(img, (0,int(frameHeight / 2) - deadZone), (frameWidth,int(frameHeight / 2) - deadZone), (255, 255, 0), 3)
     cv2.line(img, (0, int(frameHeight / 2) + deadZone), (frameWidth, int(frameHeight / 2) + deadZone), (255, 255, 0), 3)
+
+while True:
+
+    _, img = cap.read()
+    imgContour = img.copy()
+    imgHsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+
+    h_min = cv2.getTrackbarPos("HUE Min","HSV")
+    h_max = cv2.getTrackbarPos("HUE Max", "HSV")
+    s_min = cv2.getTrackbarPos("SAT Min", "HSV")
+    s_max = cv2.getTrackbarPos("SAT Max", "HSV")
+    v_min = cv2.getTrackbarPos("VALUE Min", "HSV")
+    v_max = cv2.getTrackbarPos("VALUE Max", "HSV")
+    print(h_min)
