@@ -136,3 +136,5 @@ while True:
     imgDil = cv2.dilate(imgCanny, kernel, iterations=1)
     getContours(imgDil, imgContour)
     display(imgContour)
+    
+    stack = stackImages(0.7,([img,result],[imgDil,imgContour]))
