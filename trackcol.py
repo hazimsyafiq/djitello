@@ -138,3 +138,5 @@ while True:
     display(imgContour)
     
     stack = stackImages(0.7,([img,result],[imgDil,imgContour]))
+    
+    cv2.imshow('Horizontal Stacking', stack)
